@@ -1,31 +1,17 @@
-apply plugin: 'java'
-
-//sourceCompatibility =
-version = '0.1'
-
-jar {
-    manifest {
-    	     attributes 'Implementation-Title': 'Adb Viewer',
-	     		'Implementation-Version': version
-    }
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-
-}
-
-test {
-}
-
-uploadArchives {
+buildscript {
     repositories {
-        flatDir {
-	    dir 'dist'
-	}
+        jcenter()
+    }
+
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.4.0'
     }
 }
 
+allprojects {
+    repositories {
+        jcenter()
+
+        mavenCentral()
+    }
+}
