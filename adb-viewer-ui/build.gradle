@@ -1,6 +1,6 @@
 apply plugin: 'java'
 
-group 'com.rcgonzalezf'
+group 'com.rcgonzalezf.adbviewer'
 version versionNumber
 
 
@@ -14,8 +14,8 @@ sourceSets {
 
 jar {
     manifest {
-        attributes("Implementation-Title":"$appName",
-                "Implementation-Version": "$versionNumber")
+        attributes("Implementation-Title": appName,
+                "Implementation-Version": versionNumber)
     }
 }
 
@@ -28,4 +28,4 @@ dependencies {
 
 apply plugin: 'application'
 
-mainClassName = "com.rcgonzalezf.sample.Main"
+mainClassName = "com.rcgonzalezf.adbviewer.Main"

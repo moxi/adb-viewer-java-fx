@@ -1,6 +1,5 @@
-package com.rcgonzalezf.sample;
+package com.rcgonzalezf.adbviewer;
 
-import com.rcgonzalezf.adbviewer.TestDependency;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,11 +17,6 @@ public class Main extends Application {
 
         TestDependency td = new TestDependency();
         td.foo();
-
-//        Los Resources se estan yendo al lib
-//                Si lo renombro ya queda?
-//
-//                jajajajaj
     }
 
 

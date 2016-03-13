@@ -1,6 +1,6 @@
 apply plugin: 'java'
 
-group 'com.rcgonzalezf.yourapp'
+group 'com.rcgonzalezf.adbviewer.lib'
 version versionNumber
 
 
