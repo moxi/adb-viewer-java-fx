@@ -59,3 +59,4 @@ adb-viewer-java-fx.iml
 .gradle
 adb-viewer-lib/build
 adb-viewer-ui/build
+*.iml
