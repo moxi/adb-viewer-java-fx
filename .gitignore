@@ -56,3 +56,6 @@ fabric.properties
 adb-viewer-java-fx.iml
 .idea/.name
 .idea
+.gradle
+adb-viewer-lib/build
+adb-viewer-ui/build
