@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+group 'com.rcgonzalezf.yourapp'
+version versionNumber
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+

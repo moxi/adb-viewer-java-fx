@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+group 'com.rcgonzalezf'
+version versionNumber
+
+
+sourceSets {
+    main {
+        resources {
+            srcDir "src/main/resources"
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes("Implementation-Title":"$appName",
+                "Implementation-Version": "$versionNumber")
+    }
+}
+
+dependencies {
+
+    compile project(':adb-viewer-lib')
+
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'application'
+
+mainClassName = "com.rcgonzalezf.sample.Main"

@@ -1,0 +1,3 @@
+include ":adb-viewer-lib"
+include ":adb-viewer-ui"
+
