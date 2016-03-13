@@ -5,6 +5,7 @@ version versionNumber
 
 
 dependencies {
+    testCompile 'org.jmockit:jmockit:1.22'
     testCompile 'junit:junit:4.12'
 }
 
