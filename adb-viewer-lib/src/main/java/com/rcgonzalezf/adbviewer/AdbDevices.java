@@ -1,15 +1,27 @@
 package com.rcgonzalezf.adbviewer;
 
+import com.rcgonzalezf.adbviewer.base.AdbCommandRunner;
+import com.rcgonzalezf.adbviewer.base.CommandListener;
 import com.rcgonzalezf.adbviewer.model.Device;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdbDevices {
+public class AdbDevices implements CommandListener<String, IOException>{
 
-    private String command = "devices";
+    private final String command;
+    private final List<String> params;
     private boolean serviceStarting;
     private List<Device> devices;
     private Device selectedDevice;
+
+    public AdbDevices() {
+        command = "devices";
+        params = new ArrayList<>();
+        params.add("-l");
+        populateDevices();
+    }
 
     public boolean isServiceStarting() {
         return serviceStarting;
@@ -29,5 +41,20 @@ public class AdbDevices {
 
     public Device getSelectedDevice() {
         return selectedDevice;
+    }
+
+    @Override
+    public void onSuccess(String successType) {
+
+    }
+
+    @Override
+    public void onFailure(IOException failureType) {
+
+    }
+
+
+    private void populateDevices() {
+        new AdbCommandRunner(this, command, params).execute();
     }
 }
